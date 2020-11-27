@@ -13,7 +13,7 @@
 		margin: 0;
 		padding: 0;
 		border: 0;
-		font-size: 95%;
+		font-size: 80%;
 		font: inherit;
 		vertical-align: baseline;
 	}
@@ -85,7 +85,7 @@
 		width: 1400px;
 	}
 
-	@media screen and (min-width: 961px) and (max-width: 1980px) {
+	@media screen and (min-width: 961px) and (max-width: 1880px) {
 
 		.container.\31 25\25 {
 			width: 100%;
