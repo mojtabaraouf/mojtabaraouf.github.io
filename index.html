@@ -105,9 +105,9 @@
 						<div class="container">
 
 							<header>
-								<h2 style="color:white;font-size:30px;" class="alt"><strong>Hydrodynamics and Numerical modeling (Galaxy formation)</strong></a></h2>
-								<h2 style="color:white;font-size:30px;" class="alt"><strong>Neural networks (chemical evolution) </strong></a></h2>
-								<h2 style="color:white;font-size:30px;" class="alt"><strong>Big Data analysis (cosmological simulation and observational surveys)</strong></a></h2>
+								<h2 style="color:white;font-size:30px;" class="alt"><strong>Simulation & modeling</strong></a></h2>
+								<h2 style="color:white;font-size:30px;" class="alt"><strong>Machine Learning</strong></a></h2>
+								<h2 style="color:white;font-size:30px;" class="alt"><strong>Big Data analysis</strong></a></h2>
  								<!-- <p>Ligula scelerisque justo sem accumsan diam quis<br />
 								vitae natoque dictum sollicitudin elementum.</p> -->
 							</header>
@@ -134,7 +134,7 @@
 										<a class="image fit"><img src="images/HDSMBH_Raouf2023.png" alt="" /></a> 
 										<header>
 
-											<h4>Hydrodynamic simulation</h4>
+											<h4>Hydrodynamic simulation - HDGAS</h4>
 											<h3> We present hydrodynamic simulations of the chemical evolution of the interstellar medium (ISM) gas influenced by the feedback from active galactic nuclei (AGN), coupled with the CHIMES code to treat the radiative cooling, AGN heating, and chemistry. We focus on the central 200 pc around the black hole (BH) where the AGN outflows and radiation couple to the ISM. 
 											By making an Adaptive Mesh Refinement grid model and radiative transfer for a given geometrical distribution of gas and/or dust,  we attempt to discern between the conflicting explanations for the apparently counterrotating gas in the AGN-dominated galaxy NGC 1068 (<a href="https://ui.adsabs.harvard.edu/abs/2023arXiv230614573R/abstract" target="_blank">Raouf et al. 2023</a>). 
 											The project is part of the <a href="https://moppex.github.io/people.html" target="_blank">Moppex project</a> portfolio. </h3>
@@ -148,12 +148,20 @@
 										    For the full description of the model see <a href="https://ui.adsabs.harvard.edu/abs/2017MNRAS.471..658R/abstract" target="_blank">Raouf et al. (2017)</a> and <a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.486.1509R/abstract" target="_blank">Raouf et al. (2019)</a>. Radio-SAGE will run on any N-body simulation whose trees are organised in a supported format and contain a minimum set of basic halo properties.</h3>
 										</header>
 									</article>
+									<!-- </article> -->
+ 									<article style="color:black;font-size:20px;" class="item">
+										<a class="image fit"><img src="images/Stellar_pop.png" alt="" /></a>
+										<header>
+											<h4>Stellar population</h4>
+											<h3>We investigate on the stellar population of galaxies in different dynamical halo sate using the GAMA, GALEX and WISE galaxy surveys. We found that the BGGs of unrelaxed groups have significantly bluer NUV-r colours than in relaxed groups independent of the dust mass and morphology.  Such that the SFRs and  stellar metallicities tend to be higher in unrelaxed systems, perhaps due to their more massive building blocks (Raouf et al 2019b). .</h3>
+										</header>
+									</article>										
 								</div>
 								<div class="4u 12u$(mobile)">
 									<article style="color:black;font-size:20px;" class="item">
 										<a class="image fit"><img src="images/sample_ray.jpg" alt="" /></a>
 										<header>
-											<h4>Machine learning</h4>
+											<h4>Neural Network</h4>
 											<h3>There are some chemical networks which use external libraries for solving thermochemistry as well as cooling during hydrodynamic simulations. In many cases, non-equilibrium chemistry dominates the overall cost, by quite a large margin. It has been shown that chemical evaluations in neural networks can take much less time than conventional numerical solutions for radiative transfer problems. 
 											The purpose of this study is to demonstrate the advantages of using neural networks over conventional numerical chemistry solvers through comparison of chemical evolution results using hydrodynamic simulations (<a href="https://github.com/mojtabaraouf/Gizmo_Chemulator" target="_blank">Gizmo Chemulator</a>). The intensity maps will be produced using both chemical network methods and the radiative transfer code for dust and lines as part of an extension of this project.
 											The project is part of the <a href="https://moppex.github.io/people.html" target="_blank">Moppex project</a> portfolio. </h3></h3>
@@ -168,24 +176,42 @@
 											This project was part of the <a href="http://sami-survey.org/" target="_blank">SAMI galaxy survey projects</a>.</h3>
 										</header>
 									</article>
+									</article>
+ 									<article style="color:black;font-size:20px;" class="item">
+										<a class="image fit"><img src="images/DM_377804.gif" alt="" /></a>
+										<header>
+											<h4>Convlution Neural Network</h4>
+											<h3>Our goal is to classify galaxies into fast and slow spinners using their kinematics parameters. We use convolutional neural networks as our model, and we train it on stellar images of labeled galaxies. We evaluate our model on a test dataset, and present the results using plots of loss and accuracy, and a confusion matrix that shows the false positive and true negative rates (ROC plot). We also use our model to predict the spin of some SAMI data samples that do not belong to either category.</h3>
+										</header>
+									</article>										
 								</div>
 								<div class="4u$ 12u$(mobile)">
 									<article style="color:black;font-size:20px;" class="item">
 										<!-- <a class="image fit"><img src="images/300px-HCG_7.jpg" alt="" /></a> -->
 										<a class="image fit"><img src="images/XMM-Newton_observes_fossil_galaxy_cluster.jpg" alt="" /></a>
 										<header>
-											<h4>The Environmental Dependence of Galaxy Formation</h4>
-											<h3>With the flood of quality data provided by galaxy surveys we have only recently been able to study galaxies across the full spectrum of environments.  Naively, one would expect environment to be of great importance in shaping galactic growth. Interestingly however, environment appears to play second fiddle to a much a more fundamental factor: the mass of the galaxy's dark matter halo.  Understanding exactly why this is and what processes are at play is of great importance.</h3>
+											<h4>Galaxy Environment</h4>
+											<h3>One of the important and unresolved aspects of structure formation is the prediction of the structural and dynamical properties of a virialized object in different geometrical environment, due to a large reflection of the nonlinear dynamics involved. Despite the apparent complexity of these processes, observed properties of galaxies exhibit a number of striking regularities,  including tight correlations between galaxy sizes, masses, luminosities, and dynamical properties. Moreover, there is a growing empirical evidence indicating that key properties of galaxies tightly correlate with properties of extended dark matter halos in which they form (Raouf et al, 2014, 2016, 2018).</h3>
 										</header>
 									</article>
 									<article style="color:black;font-size:20px;" class="item">
 										<a class="image fit"><img src="images/cosmicweb.jpg" alt="" /></a>
 										<header>
-											<h4>Galaxies gas accretion in the cosmic web</h4>
-											<h3>The cosmic web is represents a vital source of gas from which galaxies can accreted. Without replenishment from the cosmic web, galaxies would quickly exhaust their gas supplies through star formation. Tracking the evolution of galaxies with considering the different distance to the skeleton help us understand how galaxy morphology, ages, gas fractions, and star formation rates are observed to steadily transform with environmental density across the cosmic web.</h3>
+											<h4>Cosmic web</h4>
+											<h3>The cosmic web is represents a vital source of gas from which galaxies can accreted. Without replenishment from the cosmic web, galaxies would quickly exhaust their gas supplies through star formation. Tracking the evolution of galaxies with considering the different distance to the skeleton help us understand how galaxy morphology, ages, gas fractions, and star formation rates are observed to steadily transform with environmental density across the cosmic web (in progress).</h3>
 										</header>
 									</article>
+ 									<article style="color:black;font-size:20px;" class="item">
+										<a class="image fit"><img src="images/VYGs_TNG50.png" alt="" /></a>
+										<header>
+											<h4>Very Young Galaxies</h4>
+											<h3>Galaxy formation models predict that a small fraction of present-day galaxies should have formed most of their stellar mass in the last billion years, as confirmed by the analysis of the spectra of SDSS galaxies. Here, we analyze such redshift-zero Very Young Galaxies (VYGs) in the Illustris-TNG simulations, with a focus on their frequency,  properties, and  formation paths (Raouf et al. in prep.).</h3>
+										</header>
+									</article>																		
 								</div>
+<!-- ####### -->
+								<!-- <div class="4u$ 12u$(mobile)"> -->
+
 							</div>
 
 						</div>
@@ -206,8 +232,6 @@
 							<div style="color:white;font-size:20px;"class="wp-block-columns">
 							<div class="wp-block-column">
 							<div class="wp-block-image is-style-rounded"><figure class="aligncenter size-thumbnail"><a href="https://scholar.google.com/citations?user=gjqjvB8AAAAJ&hl=en" target="_blank"><img data-attachment-id="47" data-permalink="images/google-scholar.png" data-orig-file="images/google-scholar.png" data-orig-size="2778,2778" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="images/google-scholar.png" data-image-description="" data-medium-file="images/google-scholar.png?w=300" data-large-file="images/google-scholar.png?w=750" src="images/google-scholar.png" alt="" class="wp-image-47" srcset="images/google-scholar.png?w=150 150w, images/google-scholar.png?w=300 300w" sizes="(max-width: 100px) 50vw, 20px"></a><figcaption><strong>Google Scholar</strong></figcaption></figure></div>
-
-
 							<p class="has-text-align-center"></p>
 							</div>
 
