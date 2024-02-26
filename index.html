@@ -400,15 +400,33 @@
     var views = localStorage.getItem("views");
 
     if (views) {
-      views = parseInt(views) + 1;
+      views = parseInt(views);
     } else {
-      views = 1;
+      views = 0;
     }
 
-    localStorage.setItem("views", views);
-    counterElement.innerHTML = views;
+    var currentIP = localStorage.getItem("currentIP");
+    var userIP = null;
+
+    // Get user IP address using a third-party API
+    fetch("https://api.ipify.org?format=json")
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        userIP = data.ip;
+
+        // Check if the current IP matches the stored IP
+        if (currentIP !== userIP) {
+          views++;
+          localStorage.setItem("views", views);
+          localStorage.setItem("currentIP", userIP);
+        }
+
+        counterElement.innerHTML = views;
+      })
+      .catch(function(error) {
+        console.log("Error retrieving IP address:", error);
+      });
   });
 </script>
-
-</body>
-</html>
