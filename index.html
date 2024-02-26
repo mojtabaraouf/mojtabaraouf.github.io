@@ -369,25 +369,46 @@
 						
 						
 
-		<!-- Footer -->
-			<div id="footer">
+<!-- Footer -->
+<div id="footer">
+  <!-- Counter -->
+  <div class="counter">
+    <span>Views: <span id="counter"></span></span>
+  </div>
 
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>&copy; Mojtaba Raouf</li><li>All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
+  <!-- Copyright -->
+  <ul class="copyright">
+    <li>&copy; Mojtaba Raouf</li>
+    <li>All rights reserved</li>
+    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+  </ul>
+</div>
 
-			</div>
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollzer.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
 
+<script>
+  // Counter script
+  document.addEventListener("DOMContentLoaded", function() {
+    var counterElement = document.getElementById("counter");
+    var views = localStorage.getItem("views");
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollzer.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+    if (views) {
+      views = parseInt(views) + 1;
+    } else {
+      views = 1;
+    }
 
-	</body>
+    localStorage.setItem("views", views);
+    counterElement.innerHTML = views;
+  });
+</script>
+
+</body>
 </html>
