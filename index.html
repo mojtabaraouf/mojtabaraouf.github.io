@@ -374,6 +374,7 @@
   <!-- Counter -->
   <div class="counter">
     <span>Views: <span id="counter"></span></span>
+    <span id="ipAddress"></span>
   </div>
 
   <!-- Copyright -->
@@ -397,6 +398,7 @@
   // Counter script
   document.addEventListener("DOMContentLoaded", function() {
     var counterElement = document.getElementById("counter");
+    var ipAddressElement = document.getElementById("ipAddress");
     var views = localStorage.getItem("views");
 
     if (views) {
@@ -424,6 +426,23 @@
         }
 
         counterElement.innerHTML = views;
+
+        // Get location information using another third-party API
+        fetch("https://ipapi.co/" + userIP + "/json/")
+          .then(function(response) {
+            return response.json();
+          })
+          .then(function(data) {
+            var city = data.city ? data.city + ", " : "";
+            var region = data.region ? data.region + ", " : "";
+            var country = data.country_name ? data.country_name : "";
+
+            ipAddressElement.innerHTML = "IP: " + userIP + " (" + city + region + country + ")";
+          })
+          .catch(function(error) {
+            console.log("Error retrieving location:", error);
+            ipAddressElement.innerHTML = "IP: " + userIP;
+          });
       })
       .catch(function(error) {
         console.log("Error retrieving IP address:", error);
